@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* root variables */
+:root {
+  --primary-color: #adcbd5;
+  --accent-color: #4a8390;
+  --background-color: #f3f3f1;
+  --text-color: #9aabaf;
+  --button-color: #1b323d;
+}
+/* General styling */
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+a:hover {
+  transition: 0.5s ease;
+}
+/* Navigation styles */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+.nav-contact,
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-contact .button {
+  background-color: var(--button-color);
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+}
+.button:hover {
+  background-color: var(--accent-color);
+}
+.nav-links a:hover {
+  color: var(--accent-color);
+  font-weight: 500;
+}
