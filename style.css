@@ -33,18 +33,76 @@ a:hover {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  font-size: 1.2rem;
 }
 .nav-contact .button {
   background-color: var(--button-color);
   color: #fff;
   padding: 0.5rem 2rem;
   border-radius: 20px;
+  font-size: 1rem;
 }
 .button:hover {
   background-color: var(--accent-color);
 }
+
 .nav-links a:hover {
   color: var(--accent-color);
   font-weight: 500;
+}
+.contact-svg:hover {
+  fill: var(--accent-color);
+  transform: scale(1.1);
+}
+#Hamburger {
+  cursor: pointer;
+  display: none;
+  fill: var(--button-color);
+}
+#Hamburger:hover {
+  fill: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* hero styles */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-image: url(img/background.jpg);
+  opacity: 0.9;
+  height: 50vh;
+}
+.hero-image img {
+  width: 50%;
+  object-fit: cover;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background: var(--button-color);
+    padding: 2rem;
+    border-top-right-radius: 30px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #Hamburger {
+    display: block;
+  }
+  .nav-contact {
+    display: none;
+  }
 }
