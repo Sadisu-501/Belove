@@ -91,7 +91,11 @@ button:hover {
   height: 400px;
   object-fit: contain;
 }
-
+.hero-image img:hover,
+.main-img img:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
 .hero-text {
   max-width: 500px;
   padding: 1rem;
@@ -151,10 +155,10 @@ button:hover {
   height: 450px;
 }
 .main-img img {
-  max-width: 350px;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: block;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 .main-button {
   display: flex;
@@ -178,7 +182,51 @@ button:hover {
   background-color: var(--accent-color);
   color: #fff;
 }
+.flower-vase {
+  background-color: transparent;
+  padding: 0;
+}
+.main-img img:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 /* Responsive styles */
+@media (min-width: 1025px) {
+  .hero-container {
+    flex-wrap: nowrap;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-text h1 {
+    font-size: 1.4rem;
+    max-width: 25ch;
+  }
+}
+
+/* laptop devices */
+@media (max-width: 1024px) {
+  .nav-links {
+    z-index: 2;
+  }
+  .hero-text h1 {
+    font-size: 1.3rem;
+    margin: 1rem auto;
+    max-width: 19ch;
+  }
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+  .lamp,
+  .lady {
+    display: none;
+  }
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -186,7 +234,7 @@ button:hover {
     position: absolute;
     top: 80px;
     left: 0;
-    width: 50%;
+    width: 85%;
     height: 100vh;
     background: var(--button-color);
     padding: 2rem;
@@ -204,13 +252,13 @@ button:hover {
   .nav-contact {
     display: none;
   }
-}
-@media (min-width: 768px) {
-  .hero-container {
-    flex-wrap: nowrap;
+  .lamp,
+  .lady {
+    display: none;
   }
 }
 
+/* small screen devices */
 @media (max-width: 480px) {
   .nav-links {
     width: 90%;
@@ -223,10 +271,6 @@ button:hover {
     position: relative;
     z-index: 1;
   }
-  .hero-image img {
-    width: 250px;
-    height: 300px;
-  }
   .hero-text h1 {
     font-size: 1.2rem;
     margin: 1rem auto;
@@ -237,10 +281,5 @@ button:hover {
     margin-bottom: 1rem;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
     opacity: 0.7;
-  }
-
-  .lamp,
-  .lady {
-    display: none;
   }
 }
