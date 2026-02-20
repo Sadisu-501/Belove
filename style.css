@@ -189,10 +189,13 @@ button:hover {
 .main-img img:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.second {
+  text-align: center;
+}
 /* Responsive styles */
 @media (min-width: 1025px) {
   .hero-container {
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     position: relative;
     z-index: 1;
   }
