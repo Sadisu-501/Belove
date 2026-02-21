@@ -112,7 +112,6 @@ button:hover {
   font-size: 0.9rem;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-  opacity: 0.7;
 }
 .hero-text .button {
   width: 100%;
@@ -136,7 +135,7 @@ button:hover {
 }
 .main-content h2 {
   font-size: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   color: var(--button-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -165,7 +164,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .main-button button {
   width: 50%;
@@ -189,8 +188,14 @@ button:hover {
 .main-img img:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.second {
-  text-align: center;
+.main-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Playwrite AT", serif;
+  margin: 0 auto;
+  color: var(--text-color);
+  color: #ddd8d8;
 }
 /* Responsive styles */
 @media (min-width: 1025px) {
@@ -228,6 +233,9 @@ button:hover {
     position: relative;
     z-index: 1;
   }
+  .main-text {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -259,6 +267,9 @@ button:hover {
   .lady {
     display: none;
   }
+  .main-text {
+    font-size: 1rem;
+  }
 }
 
 /* small screen devices */
@@ -284,5 +295,8 @@ button:hover {
     margin-bottom: 1rem;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
     opacity: 0.7;
+  }
+  .main-text {
+    font-size: 0.8rem;
   }
 }
