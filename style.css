@@ -104,7 +104,8 @@ button:hover {
   padding: 1rem;
   color: var(--background-color);
 }
-.hero-text h1 {
+.hero-text h1,
+.footer-heading h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -114,7 +115,9 @@ button:hover {
 .hero-text p {
   font-size: 0.9rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  text-align: justify;
+  color: #000000;
+  opacity: 0.6;
 }
 .hero-text .button {
   width: 100%;
@@ -192,12 +195,43 @@ button:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .main-text {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-family: var(--heading-font);
   margin: 0 auto;
   color: #ddd8d8;
+}
+/* Footer section */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  /* background-color: var(--secondary-color); */
+}
+
+.footer-heading h2 {
+  max-width: 18ch;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+}
+.footer-text h2,
+.footer-text-2 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.footer-text p,
+.footer-text-2 p {
+  max-width: 50ch;
+  font-size: 0.8rem;
 }
 /* Responsive styles */
 @media (min-width: 1025px) {
@@ -228,11 +262,8 @@ button:hover {
     flex-direction: column;
     text-align: center;
   }
-  .main-text {
-    font-size: 1.2rem;
-  }
 }
-
+/* LAPTOP SCREEN SIZES */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -263,7 +294,10 @@ button:hover {
     display: none;
   }
   .main-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+  .footer-container {
+    flex-wrap: wrap;
   }
 }
 
@@ -285,9 +319,8 @@ button:hover {
   }
   .hero-text p {
     font-size: 0.8rem;
-    margin-bottom: 1rem;
   }
   .main-text {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
