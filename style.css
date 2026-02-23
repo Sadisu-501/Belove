@@ -25,7 +25,9 @@ a {
   color: var(--text-color);
 }
 a:hover,
-button:hover {
+button:hover,
+.footer-button,
+.socials {
   transition: 0.5s ease;
 }
 /* Navigation styles */
@@ -55,7 +57,8 @@ button:hover {
   border-radius: 20px;
   font-size: 1rem;
 }
-.button:hover {
+.button:hover,
+.footer-button:hover {
   background-color: var(--accent-color);
 }
 
@@ -63,16 +66,15 @@ button:hover {
   color: var(--accent-color);
   font-weight: 500;
 }
-.contact-svg:hover {
-  fill: var(--accent-color);
-  transform: scale(1.1);
-}
+
 #Hamburger {
   cursor: pointer;
   display: none;
   fill: var(--button-color);
 }
-#Hamburger:hover {
+#Hamburger:hover,
+.contact-svg:hover,
+.socials ion-icon:hover {
   fill: var(--accent-color);
   transform: scale(1.1);
 }
@@ -204,12 +206,14 @@ button:hover {
 }
 /* Footer section */
 
-.footer-container {
+.footer-container,
+.footer-last {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
   gap: 1.5rem;
+  margin: 2rem 0;
   /* background-color: var(--secondary-color); */
 }
 
@@ -223,16 +227,42 @@ button:hover {
   gap: 0.8rem;
   font-size: 0.9rem;
 }
+
 .footer-text h2,
 .footer-text-2 h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+
 .footer-text p,
-.footer-text-2 p {
-  max-width: 50ch;
+.footer-text-2 p,
+.footer-last p {
+  max-width: 42ch;
   font-size: 0.8rem;
+  color: var(--text-color);
 }
+
+.footer-button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--button-color);
+  color: var(--background-color);
+  border-radius: 20px;
+  margin-top: 1rem;
+}
+
+.footer-last {
+  margin: 0 0;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 /* Responsive styles */
 @media (min-width: 1025px) {
   .hero-text h1 {
