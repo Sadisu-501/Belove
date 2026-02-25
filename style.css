@@ -125,6 +125,9 @@ button:hover,
   text-align: justify;
   color: #000000;
   opacity: 0.6;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 20px;
 }
 .hero-text .button {
   width: 100%;
