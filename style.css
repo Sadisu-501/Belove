@@ -14,6 +14,10 @@
   --text-color: #9aabaf;
   --button-color: #1b323d;
   --heading-font: "Playwrite AT", serif;
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  --light-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  --black: #000;
+  --white: #fff;
 }
 html {
   scroll-behavior: smooth;
@@ -29,9 +33,11 @@ a {
 }
 a:hover,
 button:hover,
-.footer-button,
-.socials,
-.back-to-top ion-icon {
+.footer-button:hover,
+.socials:hover,
+.back-to-top ion-icon:hover,
+.hero-image img:hover,
+.main-img img:hover {
   transition: 0.5s ease;
 }
 /* Navigation styles */
@@ -56,7 +62,7 @@ button:hover,
 .nav-contact .button,
 .hero-text .button {
   background-color: var(--button-color);
-  color: #fff;
+  color: var(--white);
   padding: 0.5rem 2rem;
   border-radius: 20px;
   font-size: 1rem;
@@ -104,7 +110,6 @@ button:hover,
 .hero-image img:hover,
 .main-img img:hover {
   transform: scale(1.05);
-  transition: 0.5s ease;
 }
 .hero-text {
   max-width: 500px;
@@ -115,7 +120,7 @@ button:hover,
 .footer-heading h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: var(--text-shadow);
   font-family: var(--heading-font);
   max-width: 20ch;
 }
@@ -123,7 +128,7 @@ button:hover,
   font-size: 0.9rem;
   margin-bottom: 1rem;
   text-align: justify;
-  color: #000000;
+  color: var(--black);
   opacity: 0.6;
   background-color: var(--primary-color);
   padding: 1rem;
@@ -147,19 +152,19 @@ button:hover,
   padding: 2rem;
   width: 550px;
   height: 450px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 .main-content h2 {
   font-size: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: var(--button-color);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: var(--light-text-shadow);
 }
 .main-content p {
   font-size: 0.9rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: var(--light-text-shadow);
   opacity: 0.5;
   color: #2a2929;
 }
@@ -195,7 +200,7 @@ button:hover,
 }
 .main-button .explore:hover {
   background-color: var(--accent-color);
-  color: #fff;
+  color: var(--white);
 }
 .flower-vase {
   background-color: transparent;
@@ -207,7 +212,7 @@ button:hover,
 .main-text {
   font-size: 1rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: var(--text-shadow);
   font-family: var(--heading-font);
   margin: 0 auto;
   color: #ddd8d8;
@@ -285,14 +290,8 @@ button:hover,
   display: block;
 }
 /* Responsive styles */
-@media (min-width: 1025px) {
-  .hero-text h1 {
-    font-size: 1.4rem;
-    max-width: 25ch;
-  }
-}
 
-/* laptop devices */
+/* Tablet and small laptop */
 @media (max-width: 1024px) {
   .nav-links {
     z-index: 2;
@@ -314,7 +313,7 @@ button:hover,
     text-align: center;
   }
 }
-/* LAPTOP SCREEN SIZES */
+/* Mobile landscape */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -352,7 +351,7 @@ button:hover,
   }
 }
 
-/* small screen devices */
+/* Mobile view */
 @media (max-width: 480px) {
   .nav-links {
     width: 90%;
