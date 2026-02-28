@@ -99,6 +99,7 @@ button:hover,
   padding: 2rem;
   position: relative;
   z-index: 1;
+  margin-bottom: 4rem;
   background: linear-gradient(to bottom, #adcbd5 0%, #b0c7cc 40%, #4a8390 100%);
 }
 
